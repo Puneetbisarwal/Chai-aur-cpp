@@ -94,7 +94,7 @@ int main(){
     for (const auto &order : orderHistory) {
     cout << "Order ID: " << order.orderID << ", Product ID: " << order.ProductID
          << ", Customer: " << order.customerID << ", Quantity: " << order.quantity
-         << ", Time: " << ctime(&order.orderDate) << "\n";
+         << ", Time: " << ctime(&order.orderDate) << "\n";;
     }
 
     cout << "\nProduct Categories:\n";
