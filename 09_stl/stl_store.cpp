@@ -78,6 +78,23 @@ int main(){
         uniqueProductIDs.insert(product.productID);
     }
 
+    cout << "Products:\n";
+    for (const auto& product : products) {
+    cout << product.productID << " - " << product.name << " (" << product.category << ")\n";
+    }
+
+    cout << "\nRecent Customers:\n";
+    for (const auto& customer : recentCustomers) {
+    cout << customer << " ";
+    }
+    cout << endl;
+
+    cout << "\nOrder History:\n";
+    for (const auto& order : orderHistory) {
+    cout << "Order ID: " << order.orderID << ", Product ID: " << order.ProductID
+         << ", Customer: " << order.customerID << ", Quantity: " << order.quantity << "\n";
+    }
+
 
     return 0;
 }

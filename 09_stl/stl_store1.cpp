@@ -78,6 +78,60 @@ int main(){
         uniqueProductIDs.insert(product.productID);
     }
 
+    // Printing statements
+    cout << "Products:\n";
+    for (const auto &product : products) {
+        cout << "ID: " << product.productID << ", Name: " << product.name
+             << ", Category: " << product.category << "\n";
+    }
+
+    cout << "\nRecent Customers (Deque):\n";
+    for (const auto &customer : recentCustomers) {
+        cout << customer << " ";
+    }
+    cout << "\n";
+
+    cout << "\nOrder History (List):\n";
+    for (const auto &order : orderHistory) {
+        cout << "Order ID: " << order.orderID
+             << ", Product ID: " << order.ProductID
+             << ", Quantity: " << order.quantity
+             << ", Customer: " << order.customerID
+             << ", Date: " << order.orderDate << "\n";
+    }
+
+    cout << "\nProduct Categories (Set):\n";
+    for (const auto &category : categories) {
+        cout << category << "\n";
+    }
+
+    cout << "\nProduct Stock (Map):\n";
+    for (const auto &stock : productStock) {
+        cout << "Product ID: " << stock.first
+             << ", Stock: " << stock.second << "\n";
+    }
+
+    cout << "\nCustomer Orders (Multimap):\n";
+    for (const auto &entry : customerOrders) {
+        const auto &order = entry.second;
+        cout << "Customer: " << entry.first
+             << ", Order ID: " << order.orderID
+             << ", Product ID: " << order.ProductID
+             << ", Quantity: " << order.quantity
+             << ", Date: " << order.orderDate << "\n";
+    }
+
+    cout << "\nCustomer Data (Unordered Map):\n";
+    for (const auto &customer : customerData) {
+        cout << "Customer ID: " << customer.first
+             << ", Name: " << customer.second << "\n";
+    }
+
+    cout << "\nUnique Product IDs (Unordered Set):\n";
+    for (const auto &productID : uniqueProductIDs) {
+        cout << productID << " ";
+    }
+    cout << "\n";
 
     return 0;
 }
