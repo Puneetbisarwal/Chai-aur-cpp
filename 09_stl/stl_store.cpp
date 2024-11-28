@@ -78,6 +78,7 @@ int main(){
         uniqueProductIDs.insert(product.productID);
     }
 
+    // Printing statements
     cout << "Products:\n";
     for (const auto& product : products) {
     cout << product.productID << " - " << product.name << " (" << product.category << ")\n";
@@ -92,9 +93,20 @@ int main(){
     cout << "\nOrder History:\n";
     for (const auto& order : orderHistory) {
     cout << "Order ID: " << order.orderID << ", Product ID: " << order.ProductID
-         << ", Customer: " << order.customerID << ", Quantity: " << order.quantity << "\n";
+         << ", Customer: " << order.customerID << ", Quantity: " << order.quantity
+         << ", Time: " << ctime(&order.orderDate) << "\n";
     }
 
+    cout << "\nProduct Categories:\n";
+    for (const auto &category : categories) {
+        cout << category << "\n";
+    }
+
+    cout << "\nProduct Stock:\n";
+    for (const auto &stock : productStock) {
+        cout << "Product ID: " << stock.first
+             << ", Stock: " << stock.second << "\n";
+    }
 
     return 0;
 }

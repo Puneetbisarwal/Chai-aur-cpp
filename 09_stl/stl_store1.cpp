@@ -97,7 +97,7 @@ int main(){
              << ", Product ID: " << order.ProductID
              << ", Quantity: " << order.quantity
              << ", Customer: " << order.customerID
-             << ", Date: " << order.orderDate << "\n";
+             << ", Date: " << ctime(&order.orderDate) << "\n";
     }
 
     cout << "\nProduct Categories (Set):\n";
@@ -118,7 +118,7 @@ int main(){
              << ", Order ID: " << order.orderID
              << ", Product ID: " << order.ProductID
              << ", Quantity: " << order.quantity
-             << ", Date: " << order.orderDate << "\n";
+             << ", Date: " << ctime(&order.orderDate) << "\n";
     }
 
     cout << "\nCustomer Data (Unordered Map):\n";
